@@ -23,7 +23,7 @@ class MyHandler(FileSystemEventHandler):
         print ("modified: " + event.src_path)
         
     def on_moved(self, event):
-        print ("moved/renamed: " + event.src_path)
+        print ("moved/renamed: " + event.src_path + " destination: " + event.dest_path)
 
 # Get watch_directory parameter
 watch_directory = sys.argv[1]
